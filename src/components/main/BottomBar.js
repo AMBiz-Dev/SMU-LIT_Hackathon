@@ -10,7 +10,7 @@ export default function BottomBar({ handleLikePress, handlePassPress }) {
         <FontAwesome name="times" size={27} color="#F06795"></FontAwesome>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <FontAwesome name="heart" size={27} color="#64EDCC" onPress={handleLikePress}></FontAwesome>
+        <FontAwesome name="check" size={27} color="#64EDCC" onPress={handleLikePress}></FontAwesome>
       </TouchableOpacity>
       <View />
     </View>

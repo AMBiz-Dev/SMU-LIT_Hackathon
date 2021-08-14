@@ -86,7 +86,8 @@ export default function SwipeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: Constants.statusBarHeight,
+    marginTop: 8,
+    backgroundColor: '#f8f4f4',
   },
   swipes: {
     flex: 1,

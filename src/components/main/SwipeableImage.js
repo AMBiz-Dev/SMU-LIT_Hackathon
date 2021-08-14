@@ -18,20 +18,34 @@ export default function SwipeableImage({ user, willLike, willPass }) {
       )}
       <View style={styles.textContainer}>
         <View style={styles.textRow}>
-          <Text style={[styles.textPrimary, styles.textShadow]}>{user.name.first}</Text>
-          <Text style={[styles.textSecondary, styles.textShadow]}>{user.dob.age}</Text>
+          <Text style={[styles.textPrimary, styles.textShadow]}>
+            {user.name.first}
+          </Text>
+          <Text style={[styles.textSecondary, styles.textShadow]}>
+            {user.dob.age}
+          </Text>
         </View>
         <View style={styles.textRow}>
           <FontAwesome name="map-marker" size={20} color="white"></FontAwesome>
-          <Text style={[styles.textSecondary, styles.textShadow]}>Tech department</Text>
+          <Text style={[styles.textSecondary, styles.textShadow]}>
+            Tech department
+          </Text>
         </View>
         <View style={styles.textRow}>
           <FontAwesome name="book" size={20} color="white"></FontAwesome>
-          <Text style={[styles.textSecondary, styles.textShadow]}>Interest/hobbies</Text>
+          <Text style={[styles.textSecondary, styles.textShadow]}>
+            Interest/hobbies
+          </Text>
         </View>
         <View style={styles.textRow}>
-          <FontAwesome name="linkedin-square" size={20} color="white"></FontAwesome>
-          <Text style={[styles.textSecondarySmall, styles.textShadow]}>https://www.linkedin.com/in/{user.name.first}/</Text>
+          <FontAwesome
+            name="linkedin-square"
+            size={20}
+            color="white"
+          ></FontAwesome>
+          <Text style={[styles.textSecondarySmall, styles.textShadow]}>
+            https://www.linkedin.com/in/{user.name.first}/
+          </Text>
         </View>
       </View>
     </View>

@@ -20,39 +20,32 @@ const Messages = [
     userName: 'Jenny Doe',
     userImg: require('../../assets/users/user-3.jpg'),
     messageTime: '4 mins ago',
-    messageText: 'Hi Test, has work been fine for you?',
+    messageText: 'Hi there, has work been fine for you?',
   },
   {
     id: '2',
     userName: 'John Doe',
     userImg: require('../../assets/users/user-1.jpg'),
-    messageTime: '2 hours ago',
+    messageTime: '1 hours ago',
     messageText: 'Omg ya sia our office snacks are really delicious.',
   },
   {
     id: '3',
     userName: 'Ken William',
     userImg: require('../../assets/users/user-4.jpg'),
-    messageTime: '1 hours ago',
+    messageTime: '2 hours ago',
     messageText: 'Actually can you help me print "Hello World"?',
   },
 ]
 
-const MessagesTab = ({ navigation }) => {
+const MessagesTab = ({ navigation, onPressFunc }) => {
   return (
-    <Container>
+    <Container style={styles.container}>
       <FlatList
         data={Messages}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Card
-            onPress={() =>
-              navigation.navigate('Chat', {
-                chatIndex: item.id,
-                userName: item.userName,
-              })
-            }
-          >
+          <Card onPress={() => onPressFunc(item.id - 1)}>
             <UserInfo>
               <UserImgWrapper>
                 <UserImg source={item.userImg} />
@@ -79,5 +72,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#f8f4f4',
   },
 })
